@@ -53,7 +53,9 @@ while True:
     sys.stdout.write(str(pirVal) + '\n')
 
     if (pirVal == True):
+    	#reset
 	duration = datetime.now() - datetime.now()
+	startTime = datetime.now()
  
     durationSeconds = int(duration.total_seconds())
     if (durationSeconds < maxSeconds):	# check if the input is HIGH
@@ -84,7 +86,6 @@ urationSeconds < maxSeconds):	# check if the input is HIGH
     else:
         GPIO.output(LED, False)	# turn LED OFF
 	GPIO.output(TAIL,False)	# turn TAIL OFF
-	#reset
-	startTime = datetime.now()
+	
         #duration = datetime.now() - datetime.now()
 	sys.stdout.write('IN ELSE:  ' + str(duration.total_seconds()) + '\n')
